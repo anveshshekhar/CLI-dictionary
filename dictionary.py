@@ -13,8 +13,12 @@ def translate(w):
         if (yn =="y"):
             return data[get_close_matches(w, data.keys())[0]];
         elif (yn =="n"):
-         print("Did you mean %s instead? If not, we didn't get your entry: " % get_close_matches(w, data.keys())[1])
-            
+            c = input("Did you mean %s instead?  Enter Y if yes, or N if no: " % get_close_matches(w, data.keys())[1])
+            if(c=="Y" or c=="y" ):
+                print(data[get_close_matches(w, data.keys())[1]])
+            else:
+                print("Sorry,we dont accept more than two illegal entries.")
+                input("Press enter to Exit ...")
         
         
 
